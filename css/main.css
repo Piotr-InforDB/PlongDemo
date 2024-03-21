@@ -1,0 +1,22 @@
+body{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.plant{
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    opacity: 0.25;
+}
+.plant.active{
+    opacity: 1!important;
+    text-shadow: 0 0 50px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff,
+    0 0 200px #ffffff;
+
+}
