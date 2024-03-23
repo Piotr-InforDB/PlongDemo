@@ -18,5 +18,16 @@ body{
     opacity: 1!important;
     text-shadow: 0 0 50px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff,
     0 0 200px #ffffff;
+}
 
+.game-message{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0, 0, 0, .25);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    opacity: 0.75;
+    border-radius: 50rem;
 }
