@@ -19,6 +19,7 @@ const resolution = {
   x: Number(_ls('resolution_x', 1250)),
   shifted_y: JSON.parse(_ls('shifted_y', 'false')),
   shifted_x: JSON.parse(_ls('shifted_x', 'false')),
+  diffuse: JSON.parse(_ls('diffuse', 'false')),
 }
 const paddles = {
   height: null,
@@ -34,7 +35,7 @@ const ball = {
 const game = {
   on: false,
   interval: null,
-  speed: 5,
+  speed: 12.5,
 }
 
 //Logic
@@ -178,7 +179,7 @@ function moveBall(){
 
 //Display
 function initResolution(){
-  let {x, y, shifted_x, shifted_y} = resolution;
+  let {x, y, shifted_x, shifted_y, diffuse} = resolution;
 
 
 
@@ -196,6 +197,9 @@ function initResolution(){
       $(`[data-x=${index}]`).css({transform: `translateY(${offset}px)`})
     }
   }
+  if(diffuse){
+    dom.body.append('<div class="diffuse" ></div>')
+  }
 
   console.log(y)
   console.log(x)
@@ -204,7 +208,6 @@ function initResolution(){
     width: `${x}px`,
     height: `${y}px`
   })
-
 }
 
 //Plants
@@ -253,6 +256,7 @@ function initSettings(){
   $('[name=resolution_x]').val(resolution.x);
   $('[name=shifted_x]').prop('checked', resolution.shifted_x);
   $('[name=shifted_y]').prop('checked', resolution.shifted_y);
+  $('[name=diffuse]').prop('checked', resolution.diffuse);
 }
 function saveSettings(){
   $('input').each(function(){
