@@ -10,9 +10,54 @@
 
 </head>
 
-<body></body>
+<body>
+
+  <div class="playground" ></div>
+
+  <div class="settings">
+
+    <div class="mb-1" >
+      <label>Resolution</label>
+      <div class="d-flex align-items-center" >
+        <input type="text" class="form-control" placeholder="Y" name="resolution_y" >
+        <span class="mx-1" >X</span>
+        <input type="text" class="form-control" placeholder="x" name="resolution_x" >
+      </div>
+    </div>
+
+    <div class="mb-1" >
+      <label>Plants</label>
+      <div class="d-flex align-items-center" >
+        <input type="text" class="form-control" placeholder="Y" name="display_y" >
+        <span class="mx-1" >X</span>
+        <input type="text" class="form-control" placeholder="x" name="display_x" >
+      </div>
+    </div>
+
+    <div class="mb-1" >
+      <label>
+        <input type="checkbox" name="shifted_y" >
+        Shifted Y
+      </label>
+    </div>
+
+    <div class="mb-1" >
+      <label>
+        <input type="checkbox" name="shifted_x" >
+        Shifted X
+      </label>
+    </div>
+
+    <div>
+      <a class="btn btn-success w-100" onclick="saveSettings()" >SAVE</a>
+    </div>
+
+  </div>
+
+</body>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/main.js" ></script>
 <script src="js/game.js" ></script>
 
 </html>
